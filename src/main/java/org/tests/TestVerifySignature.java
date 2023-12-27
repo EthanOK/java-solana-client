@@ -18,7 +18,6 @@ public class TestVerifySignature {
 
         // 输出验证结果
 
-
         if (isValid) {
             System.out.println("Signature is valid.");
         } else {
