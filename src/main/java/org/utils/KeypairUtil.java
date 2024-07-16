@@ -2,6 +2,7 @@ package org.utils;
 
 import org.sol4k.Base58;
 import org.sol4k.Keypair;
+import org.sol4k.PublicKey;
 
 public class KeypairUtil {
     public static Keypair genetateKeypair() {
@@ -29,6 +30,14 @@ public class KeypairUtil {
     public static String getPublickey(Keypair keypair) {
         return keypair.getPublicKey().toBase58();
 
+    }
+
+    public static String getPublickeyString(String secret) {
+        return Keypair.fromSecretKey(Base58.decode(secret)).getPublicKey().toBase58();
+    }
+
+    public static PublicKey getPublickey(String secret) {
+        return Keypair.fromSecretKey(Base58.decode(secret)).getPublicKey();
     }
 
 }
