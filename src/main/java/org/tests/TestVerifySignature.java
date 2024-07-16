@@ -1,6 +1,6 @@
 package org.tests;
 
-import org.utils.VerifySolanaSignature;
+import org.utils.SolanaSignature;
 
 public class TestVerifySignature {
     public static void testVerifySignature() {
@@ -12,7 +12,7 @@ public class TestVerifySignature {
         String walletAddress = "AQAMLqdN3LSvaHx5tCVeWZWDRTGqL7QuvNgojCb3pS6Z";
 
         // 执行数字签名验证
-        boolean isValid = VerifySolanaSignature.verifySolanaSignature(message, signature, walletAddress);
+        boolean isValid = SolanaSignature.verifySolanaSignature(message, signature, walletAddress);
 
         System.out.println("签名验证结果：" + isValid);
 
